@@ -2,12 +2,11 @@
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+      [opened]="(isHandset$ | async) === true">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item href="#">Start Quiz</a>
       <a mat-list-item href="#">Back to Geocache</a>
-      <a mat-list-item href="#">About</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -16,27 +15,18 @@
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+        (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <div class="nav-title">
-        <span>Welcome in Geochecker Quiz!</span>
-        <span class="dark-theme ml-right">
-          <mat-icon class="mr-8">brightness_5</mat-icon>
-          <mat-slide-toggle (change)="onDarkSwitched($event)"></mat-slide-toggle>
-          <mat-icon class="ml-8">bedtime</mat-icon>
-        </span>
-      </div>
+      Welcome in Geochecker Quiz!
+      <div class="flex-stretch"></div>
+      <mat-icon class="mr-8">brightness_5</mat-icon>
+      <mat-slide-toggle (change)="onDarkSwitched($event)"></mat-slide-toggle>
+      <mat-icon>bedtime</mat-icon>
     </mat-toolbar>
-    <mat-form-field appearance="fill">
-      <mat-label>Favorite animal</mat-label>
-      <mat-select>
-        <mat-option value="--">--</mat-option>
-        <mat-option value="Dog">Dog</mat-option>
-        <mat-option value="Cat">Cat</mat-option>
-      </mat-select>
-      <mat-error>Please choose an animal</mat-error>
-    </mat-form-field>
+    <div class="animation-container"></div>
+    <div class="button-container">
+      <button mat-raised-button color="primary">Start Quiz</button>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

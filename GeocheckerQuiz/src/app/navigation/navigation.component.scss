@@ -10,20 +10,15 @@
   background: inherit;
 }
 
+.flex-stretch {
+  flex: 1 0 auto;
+}
+
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
   z-index: 1;
 }
-
-.nav-title {
-  display: flex;
-}
-
-.dark-theme {
-  display: flex;
-}
-
 .mr-8 {
   margin-right: 8px;
 }
@@ -32,6 +27,16 @@
   margin-left: 8px;
 }
 
-.ml-right {
-  padding: 5px;
+.animation-container {
+  height: 350px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.mat-raised-button {
+  width: 140px;
+  height: 80px;
+  font-size: 25px;
 }
