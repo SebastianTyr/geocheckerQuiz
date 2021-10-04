@@ -1,6 +1,6 @@
-export class QuestionModel {
+export class QuizModel {
     "id": number;
-    "text": string
+    "text": string;
     "answer_A": string;
     "answer_B": string;
     "answer_C": string;

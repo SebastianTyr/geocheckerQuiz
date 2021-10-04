@@ -14,6 +14,7 @@ import { MatListModule } from '@angular/material/list';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import { QuizComponent } from './quiz/quiz.component';
 
 @NgModule({
   declarations: [
