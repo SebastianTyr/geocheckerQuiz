@@ -14,12 +14,14 @@ import { MatListModule } from '@angular/material/list';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import {MatCardModule} from '@angular/material/card';
 import { QuizComponent } from './quiz/quiz.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent
+    NavigationComponent,
+    QuizComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { QuizComponent } from './quiz/quiz.component';
     MatListModule,
     MatSlideToggleModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
