@@ -15,6 +15,8 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatGridListModule} from '@angular/material/grid-list';
 import { QuizComponent } from './quiz/quiz.component';
 
 @NgModule({
@@ -30,13 +32,15 @@ import { QuizComponent } from './quiz/quiz.component';
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
+    MatButtonToggleModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
     MatSlideToggleModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatCardModule
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
