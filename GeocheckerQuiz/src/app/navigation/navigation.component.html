@@ -25,7 +25,14 @@
       <mat-icon>bedtime</mat-icon>
     </mat-toolbar>
     <router-outlet></router-outlet>
-    <div class="button-container">
+    <div *ngIf="!hasRoute('quiz')" class="button-container">
+      <div class="p">
+        <p>Welcome in my Geochecker Quiz App!</p>
+        <p>Let's see if you a smart enough to answer all question and find the right coordinates!</p>
+        <p>If you ready, just click below button ;)</p>
+        <mat-icon>arrow_downward</mat-icon>
+        <mat-icon>arrow_downward</mat-icon>
+      </div>
       <button mat-raised-button color="primary" routerLink="/quiz" routerLinkActive="active">Start Quiz</button>
     </div>
   </mat-sidenav-content>

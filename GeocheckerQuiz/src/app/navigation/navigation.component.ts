@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { MatSlideToggleChange } from '@angular/material/slide-toggle';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -24,7 +25,11 @@ export class NavigationComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, public router: Router) {}
+
+  hasRoute(route: string){
+    return this.router.url.includes('quiz')
+  }
 
   onDarkSwitched({ checked }: MatSlideToggleChange) {
     this.darkSwitch.emit(checked);
