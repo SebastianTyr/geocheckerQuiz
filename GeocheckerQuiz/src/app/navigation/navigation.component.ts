@@ -19,6 +19,8 @@ export class NavigationComponent {
   @Output()
   readonly darkSwitch = new EventEmitter<boolean>();
 
+  text1=''
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),

@@ -19,6 +19,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { QuizComponent } from './quiz/quiz.component';
 import { CommonModule } from '@angular/common';
+import { NgxWigModule } from 'ngx-wig';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { CommonModule } from '@angular/common';
     MatFormFieldModule,
     MatSelectModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    NgxWigModule
   ],
   providers: [],
   bootstrap: [AppComponent]
