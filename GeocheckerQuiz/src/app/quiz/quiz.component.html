@@ -1,32 +1,32 @@
-<div class="question-grid-container">
+<div *ngFor="let question of quizData" class="question-grid-container">
     <mat-card class="question-card">
-        <mat-card-title>Question 1</mat-card-title>
+        <mat-card-title>Question {{ question.id }}</mat-card-title>
         <br>
-        <mat-card-content>placeholder for question text</mat-card-content>
+        <mat-card-content>{{ question.text }}</mat-card-content>
         <mat-card-actions align="end">
             <button mat-button>Next Question</button>
         </mat-card-actions>
     </mat-card>
 </div>
-<div class="answers-grid-container">
+<div *ngFor="let question of quizData" class="answers-grid-container">
     <mat-card class="answers">
         <mat-card-actions>
-            <button class="btn-ans" mat-button>Answer A</button>
+            <button class="btn-ans" mat-button>{{ question.answer_A }}</button>
         </mat-card-actions>
     </mat-card>
     <mat-card class="answers">
         <mat-card-actions>
-            <button class="btn-ans" mat-button>Answer B</button>
+            <button class="btn-ans" mat-button>{{ question.answer_B }}</button>
         </mat-card-actions>
     </mat-card>
     <mat-card class="answers">
         <mat-card-actions>
-            <button class="btn-ans" mat-button>Answer C</button>
+            <button class="btn-ans" mat-button>{{ question.answer_C }}</button>
         </mat-card-actions>
     </mat-card>
     <mat-card class="answers">
         <mat-card-actions>
-            <button class="btn-ans" mat-button>Answer D</button>
+            <button class="btn-ans" mat-button>{{ question.answer_D }}</button>
         </mat-card-actions>
     </mat-card>
 </div>
